@@ -7,5 +7,18 @@
         {{hero.name}}
       </span>
     </a>
+    <button class="delete" title="delete hero"
+            (click)="delete(hero)">
+      x
+    </button>
   </li>
 </ul>
+<h2> Add a hero</h2>
+<div>
+  <label>Hero name:
+    <input #heroName/>
+  </label>
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+</div>
